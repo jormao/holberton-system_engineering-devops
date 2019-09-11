@@ -1,2 +1,3 @@
-# holberton-system_engineering-devops
-# holberton-system_engineering-devops
+This project have the job for learn SHELL basic
+11/09/19
+by Jorge Salazar
