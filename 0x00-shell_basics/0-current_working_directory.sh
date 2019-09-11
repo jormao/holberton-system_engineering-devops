@@ -1,2 +1,4 @@
 #!/bin/bash
-echo pwd
+#devuelve el directorio actual
+pwd
+
