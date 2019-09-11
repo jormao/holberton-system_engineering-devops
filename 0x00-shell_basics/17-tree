@@ -1,2 +1,2 @@
 #!/bin/bush
-mkdir welcome/ welcome/to/ welcome/to/holberton
+mkdir -p {welcome/ {welcome/to/ {welcome/to/holberton}}}
