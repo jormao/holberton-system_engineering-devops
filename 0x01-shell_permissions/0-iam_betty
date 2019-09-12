@@ -1,2 +1,2 @@
 #!/bin/bash
-usermod -u 10000001 betty
+su betty
