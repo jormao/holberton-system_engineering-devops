@@ -1,0 +1,24 @@
+man(2)
+
+NAME
+	holberton - become a full-stack software engineer.
+
+SYNOPSIS
+	holberton [STUDENTNAME]
+
+DESCRIPTION
+	Holberton school is a project-based alternative to college for the next generation of software engineers.
+
+OPTIONS
+	holberton does not take any options. However, you can supply studentname.
+
+SEE ALSO
+	peerlearning(2), projectbased(2), fullstack(2), Betty(1)
+
+BUGS
+	No known bugs.
+
+AUTHOR
+	Jorge Salazar
+
+0.32								12 Sept 2019
