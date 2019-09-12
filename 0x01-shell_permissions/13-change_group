@@ -1,2 +1,2 @@
 #!/bin/bash
-chown holberton:group hello
+chgrp holberton hello
