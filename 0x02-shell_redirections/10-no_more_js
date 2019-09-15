@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -R *js 2> /dev/null
+rm -r --preserve-root *js 2> /dev/null
