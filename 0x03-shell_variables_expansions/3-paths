@@ -1,2 +1,2 @@
 #!/bin/bash
-alias ls="rm *"
+echo $PATH | tr -s : \n | wc -l
