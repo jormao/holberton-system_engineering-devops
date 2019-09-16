@@ -1,2 +1,2 @@
 #!/bin/bash
-touch action | mv action $PATH
+mkdir action $PATH
