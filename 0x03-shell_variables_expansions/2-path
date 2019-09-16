@@ -1,2 +1,2 @@
 #!/bin/bash
-tar -cf action $PATH
+touch action $PATH
