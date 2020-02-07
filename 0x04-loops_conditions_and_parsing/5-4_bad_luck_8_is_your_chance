@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Holberton School" 10 times but after nine print Hi
+# This script is displaying "Holberton School" 10 times but print bad luck in line4 and good luck in line8
 
 i=1
 while ((i < 11))
