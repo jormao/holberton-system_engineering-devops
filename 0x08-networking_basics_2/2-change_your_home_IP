@@ -6,6 +6,6 @@
 # The checker is running on Docker, so make sure to read this
 
 cp /etc/hosts ~/hosts.new
-sed -i s/127.0.0.2/127.0.0.1/ ~/hosts.new
+sed -i s/127.0.0.1/127.0.0.2/ ~/hosts.new
 echo -e "\n8.8.8.8\tfacebook.com" >> ~/hosts.new
 cp -f ~/hosts.new /etc/hosts
