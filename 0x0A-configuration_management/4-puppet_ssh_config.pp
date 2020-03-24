@@ -2,12 +2,12 @@
 file { '/etc/ssh/ssh_config':
   ensure  =>  present,
 }->
-file_line { 'Pass_authent':
+file_line { 'passwd auth':
   ensure =>  'present',
   path   =>  '/etc/ssh/ssh_config',
   line   =>  'PasswordAuthentication no',
 }->
-file_line { 'private_key':
+file_line { 'Declare identity file':
   ensure => 'present',
   path   =>  '/etc/ssh/ssh_config',
   line   => 'IdentityFile ~/.ssh/holberton',
