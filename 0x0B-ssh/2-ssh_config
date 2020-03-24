@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Client configuration file :
+# SSH client configuration: use the private key ~/.ssh/holberton
+# SSH client configuration: refuse to authenticate using a password
+Host *
+    IdentityFile: ~/.ssh/holberton
+    BatchMode=yes
