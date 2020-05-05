@@ -8,6 +8,7 @@ Requirements:
     "completed": TASK_COMPLETED_STATUS, "username": "USERNAME"}}, ... ]}
     File name must be: USER_ID.json
 """
+import json
 from requests import get
 from sys import argv
 
@@ -16,12 +17,15 @@ if __name__ == "__main__":
     user = get(url1).json()
     user = user['username']
     tasks = get(url1 + '/todos').json()
+    file = argv[1] + '.json'
     my_list = []
+    _json = {}
     for task in tasks:
         _dict = {}
-        _dict['task'] = task['title']
-        _dict['completed'] = task['completed']
-        _dict['username'] = user
+        _dict["task"] = task["title"]
+        _dict["completed"] = task["completed"]
+        _dict["username"] = user
         my_list.append(_dict)
-    _json = {argv[1]: my_list}
-    print(_json)
+    _json[argv[1]] = my_list
+    with open(file, 'w') as f:
+        json.dump(_json, f)
