@@ -29,7 +29,7 @@ def count_words(subreddit, word_list, after="", counter={}, first=0):
         if (after is not None):
             count_words(subreddit, word_list, after, counter, first)
         else:
-            p = sorted(counter.items())
+            p = sorted(counter.items(), key=lambda x: x[1], reverse=True)
             for k, v in p:
                 if v != 0:
                     print('{}: {}'.format(k, v))
