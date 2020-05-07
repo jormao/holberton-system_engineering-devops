@@ -11,7 +11,6 @@ def number_of_subscribers(subreddit):
     path = '/r/{}/about.json'.format(subreddit)
     header = {'user-agent': 'jormao'}
     r = get(url + path, headers=header).json()
-    value = r.get('data').get('subscribers')
-    if (value is not None):
-        return (value)
+    if r.get('data') and r.get('data').get('subscribers'):
+        return (r['data']['subscribers'])
     return (0)
