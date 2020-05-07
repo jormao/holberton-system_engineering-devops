@@ -10,12 +10,13 @@ def top_ten(subreddit):
     url = 'https://www.reddit.com'
     path = '/r/{}/hot.json'.format(subreddit)
     header = {'user-agent': 'jormao'}
-    r = get(url + path, headers=header).json()
-    if (r.get('error')):
-        return (0)
-    hot_post = r['data']['children']
-    count = 0
-    for hot in hot_post:
-        if (count < 10):
-            print(hot['data']['title'])
-        count += 1
+    r = get(url + path, headers=header, allow_redirects=False)
+    if (r.status_code in [302, 404]):
+        print(None)
+    else:
+        hot_post = r.json()['data']['children']
+        count = 0
+        for hot in hot_post:
+            if (count < 10):
+                print(hot['data']['title'])
+            count += 1
