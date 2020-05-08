@@ -20,9 +20,11 @@ def count_words(subreddit, word_list, after="", counter={}, first=0):
     else:
         hot_post = r.json()['data']['children']
         for hot in hot_post:
-            for word in counter:
-                counter[word] += (hot['data']['title']).lower().split(
-                                  " ").count(word.lower())
+            new_list = (hot['data']['title']).lower().split(" ")
+            for word in word_list:
+                for w_list in new_list:
+                    if word.lower() == w_list:
+                        counter[word] += 1
         after = r.json()['data']['after']
         if (after is not None):
             count_words(subreddit, word_list, after, counter, first)
